@@ -40,7 +40,7 @@ const entrySchema = new Schema(
             maxlength: 50
         },
         dog_weight: {
-            type: Number,
+            type: String,
             required: true,
         },
         dog_allergies: {
