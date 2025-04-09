@@ -2,13 +2,6 @@ import mongoose, { Schema } from "mongoose";
 
 const entrySchema = new Schema(
     {
-        userId: {
-            type: String,
-            required: true,
-            trim: true,
-            index: true,
-            maxlength: 50
-        },
         firstName: {
             type: String,
             trim: true,
@@ -40,7 +33,7 @@ const entrySchema = new Schema(
             maxlength: 50
         },
         dog_weight: {
-            type: Number,
+            type: String,
             required: true,
         },
         dog_allergies: {
