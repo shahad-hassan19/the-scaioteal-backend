@@ -2,23 +2,18 @@ import mongoose, { Schema } from "mongoose";
 
 const entrySchema = new Schema(
     {
-        firstName: {
+        pup_name: {
             type: String,
             trim: true,
-            index: true,
-            maxlength: 50
-        },
-        lastName: {
-            type: String,
-            trim: true,
-            index: true,
-            maxlength: 50
-        },
-        dog_name: {
-            type: String,
             required: true,
+            index: true,
+            maxlength: 50
+        },
+        your_name: {
+            type: String,
             trim: true,
             index: true,
+            required: true,
             maxlength: 50
         },
         dog_age: {
@@ -26,23 +21,13 @@ const entrySchema = new Schema(
             required: true,
             trim: true,
         },
-        dog_breed: {
+        dog_eats: {
             type: String,
             required: true,
             trim: true,
-            maxlength: 50
+            enum: ["fresh_food", "kibble", "mixture_of_everything"]
         },
-        dog_weight: {
-            type: String,
-            required: true,
-        },
-        dog_allergies: {
-            type: String,
-            required: true,
-            trim: true,
-            enum: ["Allergies", "preferences", "sensitive stomach", "none"]
-        },
-        dog_fav_treat: {
+        email_address: {
             type: String,
             required: true,
             trim: true

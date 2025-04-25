@@ -5,17 +5,14 @@ import { Entry } from "../models/entry.models.js";
 
 const formSubmission = asyncHandler( async(req, res) => {
     try {
-        const { firstName, lastName, dog_name, dog_age, dog_breed, dog_weight, dog_allergies, dog_fav_treat } = req.body;
+        const { pup_name, your_name, dog_age, dog_eats, email_address } = req.body;
 
         const newEntry = await Entry.create({
-            firstName,
-            lastName,
-            dog_name,
+            pup_name,
+            your_name,
             dog_age,
-            dog_breed,
-            dog_weight,
-            dog_allergies,
-            dog_fav_treat
+            dog_eats,
+            email_address
         })
         await newEntry.save();
         if(!newEntry){
